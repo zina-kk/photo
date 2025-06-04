@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;} 
+
+a {text-decoration: none; color: black;}
+
+img {max-width: 100%;}
+
+#layout {width: 1200px; margin: auto;}
+
+header {height: 150px; display: flex; justify-content: space-between; }
+
+/* 로고 이미지 */
+header> a { align-self: center;  padding: 25px;} 
+
+
+/* 로그인+메뉴 */
+header> div {display: flex; flex-direction: column; justify-content: space-between;}
+
+
+/* 로그인 */
+#login {display: flex; justify-content: flex-end; padding: 20px 20px 0 0; }
+#login a {display:block; padding:3px 15px;}
+#login a:hover {text-decoration: underline; font-weight: bold; }
+
+
+/* 메뉴 */
+#mm ul {list-style: none; display: flex;}
+#mm a {display:block; padding:12px 30px; font-size: 1.2rem; font-weight: bold; letter-spacing: 1px;}
+#mm a:hover {background:black; color:white;}
+
+
+/* 배너사진 */
+#mainPhoto {height: 300px;}
+#mainPhoto h1 {display: none;}
+
+
+
+/* 서비스창 */
+main>div>h2 {font-size: 2.5rem; margin: 20px 0;}
+
+/* 국비안내 */
+#service {height: 250px; border-bottom: 3px dashed #999;  }
+#service h2 {padding-left: 30px; padding-top: 15px;}
+#service ul {display: flex;/*  align-items: center; */ justify-content: space-between; padding: 0 120px; list-style: none; margin-top: 40px; height: 100px;}
+#service li {font-size: 1.2rem; flex: 1; margin: 5px 15px; display: flex; align-items: center; justify-content: center; text-align: center;}
+#service li:hover {font-weight: bold; background: black; color: white;}
+#service li:hover a {color: white;}
+
+
+
+/* 공지사항+전시안내 */
+#menuMenu {height: 250px; display: flex; padding: 20px;}
+#notice h3 a , #conduct h3 a {float: right; padding-right: 10px; font-size: 1.5rem;} 
+#notice li , #conduct li {list-style: none; }
+#notice span , #conduct span {float: right;}
+#notice ol , #conduct ol {line-height: 200%; margin-top: 30px;}
+#notice li:hover , #conduct li:hover {text-decoration: underline;}
+
+
+/* 공지사항 */
+#notice {width: 110%; } 
+#notice h3 {margin: 10px 0;}
+
+
+/* 전시안내 */
+#conduct {width: 110%; margin-left: 70px;}
+#conduct h3 {margin: 10px 0 10px 10px;}
+
+
+/*  수강생 포트폴리오 */ 
+#portfolio {height: 730px; overflow: hidden; background: black; }
+#portfolio h2 { margin: 30px 0 25px 20px; color: white; }
+#portfolio div { display: flex; width:1750px; position: relative; left: -350px; }
+#portfolio a {padding: 10px; width: 350px;  transition: 0.5s;}
+#portfolio img {  display: block; width: 100%;  }
+#portfolio div:last-child {margin-top: 10px; width: 2100px; left: -200px;}
+
+
+
+/* 강사진 */
+#teacher{overflow: hidden; width: 1200px;}
+#teacher h2 {padding: 30px 0 30px 20px;}
+#teacher> div {display: flex; justify-content: space-evenly; height: 320px; width: 1440px; position: relative;}
+#teacher> div div {padding-right: 50px;margin-top: 30px; width: 240px;}
+#teacher a {display: block; text-align: center; margin-top: 30px; }
+#teacher a:hover {font-weight: bold; }
+#teacher img {border-radius: 50%; width:100%; display: block; transition: 0.3s;}
+.big img {transform: scale(1.2); box-shadow: 0 0 10px black; z-index: 1; background: black;}
+
+
+
+/* 하단 */
+footer {height: 100px; background: black; display: flex; align-items: center; padding: 25px; justify-content: space-between; }
+footer img {width:200px ;}
+footer p {color: white; }
+
+

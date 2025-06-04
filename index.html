@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울사진학원</title>
+    <link rel="stylesheet" href="css/seoul.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+    <script>
+        $(()=>{
+            const toRight = ()=>{
+            $("#portfolio div:first-of-type").stop().animate({
+                left : 0
+
+                }, 1500 , () =>{
+                    $("#portfolio div:first-of-type").css('left' , '-350px');
+                    $("#portfolio div:first-of-type").prepend($("#portfolio div:first-of-type").children().last());
+                    });
+            }
+            setInterval(toRight , 2500);
+         
+
+            const toLeft=()=>{
+            $("#portfolio div:last-child").stop().animate({
+                left: '-550px'
+                }, 1500  , ()=>{
+                    $("#portfolio div:last-child").css('left' , '-200px');
+                    $("#portfolio div:last-child").append($("#portfolio div:last-child").children().first());
+                    });
+            }
+            setInterval(toLeft , 2500);
+
+
+            const toRright = ()=>{
+                $("#teacher> div div").removeClass('big');
+                $("#teacher> div").stop().animate({
+                    left : "-240px"
+
+                }, 1500 , ()=>  {
+                    $("#teacher> div").css('left' , 0);
+                    $("#teacher> div").append( $("#teacher> div").children().first() );
+                    
+                    $("#teacher> div div").eq(2).addClass('big');
+                });
+            }
+           setInterval(toRright , 2500);
+
+        });
+    </script>    
+
+</head>
+<body>
+    <div id="layout">
+        <header>
+            <a href="#"><img src="images/logo.png" alt="서울사진학원로고"></a>
+            <div>
+                <div id="login">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                </div>
+                <nav id="mm">               
+                    <ul>
+                        <li><a href="#">학원안내</a></li> 
+                        <li><a href="#">수강생과정안내</a></li> 
+                        <li><a href="#">사진교실</a></li> 
+                        <li><a href="#">졸업생작품</a></li> 
+                        <li><a href="#">상담실</a></li> 
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section id="mainPhoto">
+            <h1>우수기관메인사진</h1>
+            <img src="images/photo.jpg" alt="우수기관메인사진"> 
+        </section>
+        <main>
+            <div>
+                <h2>Service</h2>
+                <section id="service">
+                    <h2>국비 안내</h2>
+                    <ul>    
+                        <li><a href="#">국비지원<br>내일배움카드</a></li>
+                        <li><a href="#">취업창업과정</a></li>
+                        <li><a href="#">쇼핑몰사진과정</a></li>
+                        <li><a href="#">취미 및 홍보과정</a></li>
+                        <li><a href="#">사진기능사과정</a></li>
+                    </ul>
+                </section>
+                <div id="menuMenu">
+                    <section id="notice">
+                        <h3>공지사항 <a href="#"> + </a></h3>
+                        <ol>    
+                            <li><a href="#">**국비지원 및 취업취미과정 5월~6월 과정 안내**<span>[2020-05-24]</span></a></li>
+                            <li><a href="#">"EBS 방송:직업탐구" 출연<span>[2019-08-12]</span></a></li>
+                            <li><a href="#">***"SBS 방송 소상공인닥터3 방송출연"***<span>[2013-06-27]</span></a></li>
+                            <li><a href="#">2011년 5회 사진 기능사 실기시험 100% 합격<span>[2011-12-30]</span></a></li>
+                        </ol>
+                    </section>
+                    <section id="conduct">
+                        <h3>전시안내 <a href="#"> + </a></h3>
+                        <ol>
+                            <li><a href="#"> 〈전시회〉 오형근작가 중간인<span>[2012-06-10]</span></a></li>
+                            <li><a href="#"> 〈전시회〉 난다, THE DAY<span>[2012-06-10]</span></a></li>
+                            <li><a href="#"> 〈전시회〉 권오상작가 개인전<span>[2012-06-10]</span></a></li>
+                            <li><a href="#"> 〈전시회〉 앙리 카르티에 브레송 사진전 안내<span>[2012-06-10]</span></a></li>
+                        </ol>
+                    </section>
+                </div>
+                <section id="portfolio">
+                    <h2>Portfolio</h2>
+                    <div>
+                        <a href="#"><img src="images/photo1.jpg" alt="수강생 포트폴리오 1"></a>
+                        <a href="#"><img src="images/photo2.jpg" alt="수강생 포트폴리오 2"></a>
+                        <a href="#"><img src="images/photo3.jpg" alt="수강생 포트폴리오 3"></a>
+                        <a href="#"><img src="images/photo4.jpg" alt="수강생 포트폴리오 4"></a>
+                        <a href="#"><img src="images/photo5.jpg" alt="수강생 포트폴리오 5"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="images/photo7.jpg" alt="수강생 포트폴리오 7"></a>
+                        <a href="#"><img src="images/photo8.jpg" alt="수강생 포트폴리오 8"></a>
+                        <a href="#"><img src="images/photo9.jpg" alt="수강생 포트폴리오 9"></a>
+                        <a href="#"><img src="images/photo10.jpg" alt="수강생 포트폴리오 10"></a>
+                        <a href="#"><img src="images/photo11.jpg" alt="수강생 포트폴리오 11"></a>
+                        <a href="#"><img src="images/photo12.jpg" alt="수강생 포트폴리오 12"></a>
+                    </div>
+                </section>
+                <section id="teacher">
+                    <h2>강사진</h2>
+                    <div>
+                        <div>
+                            <img src="images/teacher1.jpg" alt="강사1"><a href="#">김영민</a>
+                        </div>
+                        <div>
+                            <img src="images/teacher2.jpg" alt="강사2"><a href="#">임 철</a>
+                        </div>
+                        <div class="big">
+                            <img src="images/teacher3.jpg" alt="강사3" ><a href="#">김형재</a>
+                        </div>
+                        <div>
+                            <img src="images/teacher4.jpg" alt="강사4"><a href="#">정재원</a>
+                        </div>
+                        <div>
+                            <img src="images/teacher5.jpg" alt="강사5"><a href="#">장유진</a>
+                        </div>
+                        <div>
+                            <img src="images/teacher6.jpg" alt="강사6"><a href="#">신유나</a> 
+                        </div>
+                    </div>    
+                </section>
+            </div>    
+        </main>
+        <footer>
+            <a href="#"><img src="images/footer_logo.png" alt="서울사진학원하단로고"></a>
+            <div>
+                <p>copyright2022 ⓒ 서울사진학원 All Rights Reserved.<br>사업자등록번호:201-86-23600 <b>|</b> 대표자:김동현 <b>|</b> 주소:서울강남구 역삼동 831-32번지(역삼로 1길 18) 동원빌딩 5층 <br>상담:평일 12시30분~8시30분/토,일 11시~6시 <b>|</b> 상담 기간 외 문의 010-2585-2434 </p>
+            </div>
+        </footer>
+    </div>    
+</body>
+</html>
